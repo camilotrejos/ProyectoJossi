@@ -11,22 +11,22 @@ export const Dashboard = () => {
     
     return (
         <>
-            <div class="d-flex justify-content-center">
+            <div className="d-flex justify-content-center">
               <h1>Dashboard</h1>        
             </div>  
             <p/> <p/><p/><p/>
-            <div class="d-flex justify-content-center">
+            <div className="d-flex justify-content-center">
 
-                <button type="button" class="btn btn-light">Servicio+</button>
+                <button type="button" className="btn btn-light">Servicio+</button>
             </div>
 
 
-            <div class="d-flex justify-content-left">
+            <div className="d-flex justify-content-left">
                 <h2>Servicios</h2>
             </div>     
               
-            <div class="d-flex justify-content-center">
-            <table class="table table-dark table-striped">
+            <div className="d-flex justify-content-center">
+            <table className="table table-dark table-striped">
                 <thead>
                     <tr>
                     <th scope="col">#</th>
@@ -66,16 +66,16 @@ export const Dashboard = () => {
 
             </div>
             <p/><p/><p/>
-            <div class="d-flex justify-content-center">
+            <div className="d-flex justify-content-center">
 
-                <button type="button" class="btn btn-light">Empleado+</button>
+                <button type="button" className="btn btn-light">Empleado+</button>
             </div>
-            <div class="d-flex justify-content-left">
+            <div className="d-flex justify-content-left">
                 <h2>Empleados</h2>
             </div>     
               
-            <div class="d-flex justify-content-center">
-            <table class="table table-dark table-striped">
+            <div className="d-flex justify-content-center">
+            <table className="table table-dark table-striped">
                 <thead>
                     <tr>
                     <th scope="col">#</th>

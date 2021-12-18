@@ -12,13 +12,13 @@ import { Perfilusuario } from './Componentes/Perfilusuario';
 import { Dashboard } from './Componentes/Dashboard';
 
 import React from 'react';
-import { Routes, Route, Link, BrowserRouter } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 
 
 function App() {
   return (
     <>
-      <section class="bg-dark text-light">
+      <section className="bg-dark text-light">
         <div className="container">
           <div className="row">
             <div className="col-sm-12">

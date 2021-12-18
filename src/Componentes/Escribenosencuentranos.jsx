@@ -14,7 +14,7 @@ export const Escribenosencuentranos = () => {
                         </div>
                         <div className="col">
                             <h2><center>¡Encuéntranos!</center></h2>
-                            <center><img class="" src={Mapa} width="300" height="260" /></center>
+                            <center><img alt="" src={Mapa} width="300" height="260" /></center>
                         </div>
                     </div>
                 </div>

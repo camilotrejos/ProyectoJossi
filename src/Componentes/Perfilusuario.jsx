@@ -2,13 +2,6 @@ import Avatarusuario from "../Imagenes/Avatarusuario.png";
 
 export const Perfilusuario = () => {
 
-    const dataService= [
-
-    {Id:1, Nombre:'Corte de Cabello', Fecha:'24/12/2021', Empleado:'Ramón Pérez', Comentario: "Muy bueno", Calificacion: "5", Accion: "E"},
-    {Id:2, Nombre:'Corte de Barba', Fecha:'07/12/2021', Empleado:'Agripinito Tirciniano', Comentario: "Muy bueno", Calificacion: "4", Accion: "E"}
-
-    ]
-    
     return (
         <>
             <div class="d-flex justify-content-center">
@@ -16,7 +9,7 @@ export const Perfilusuario = () => {
             </div>  
             <p/>
             <div>
-            <img class="" src={Avatarusuario} width="150" />
+            <img alt="" src={Avatarusuario} width="150" />
             </div>
             <p/>
             <div class="d-flex justify-content-left">

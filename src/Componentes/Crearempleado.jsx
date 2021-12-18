@@ -37,23 +37,23 @@ export function Crearempleado() {
 
     return (
         <>
-            {alerta && <div class="alert alert-primary" role="alert">
+            {alerta && <div className="alert alert-primary" role="alert">
                 "Empleado {nombre.current.value} creado con éxito"
             </div>}
             <h1><center>Crear empleado</center></h1>
             <p></p>
             <form>
                 <center>
-                    <div class="d-grid gap-2 col-6 mx-auto">
+                    <div className="d-grid gap-2 col-6 mx-auto">
                         <input type="text" className="form-control" placeholder="Nombre empleado" ref={nombre} />
                     </div>
                     <p></p>
-                    <div class="d-grid gap-2 col-6 mx-auto">
+                    <div className="d-grid gap-2 col-6 mx-auto">
                         <input type="text" className="form-control" placeholder="Servicio que presta" ref={servicio} />
                     </div>
                     <p></p>
                     <div className="col-auto">
-                        <button type="button" class="btn btn-light mb-3" onClick={Crear}>Crear</button>
+                        <button type="button" className="btn btn-light mb-3" onClick={Crear}>Crear</button>
                     </div>
                 </center>
             </form>

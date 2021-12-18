@@ -13,7 +13,7 @@ export const Otrosservicios = () => {
                     <div class="col-md-4 mb-5">
                         <div class="card h-100">
                             <div class="card-body">
-                                <img class="" src={Barba} width="300" />
+                                <img alt="" src={Barba} width="300" />
                             </div>
                             <div class="card-footer"><button type="button" class="btn btn-dark">Barba</button></div>
                         </div>
@@ -21,7 +21,7 @@ export const Otrosservicios = () => {
                     <div class="col-md-4 mb-5">
                         <div class="card h-100">
                             <div class="card-body">
-                                <img class="" src={Cejas} width="300" />
+                                <img alt="" src={Cejas} width="300" />
                             </div>
                             <div class="card-footer"><button type="button" class="btn btn-dark">Cejas</button></div>
                         </div>

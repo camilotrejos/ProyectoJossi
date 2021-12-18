@@ -5,12 +5,12 @@ export const Descripcionservicio = () => {
         <>
             <h1><center>Nuestros servicios</center></h1>
             <p></p>
-            <section class="my-4">
+            <section className="my-4">
                 <div className="container">
                     <div className="row">
                         <div className="col-md-5">
                             <p></p>
-                            <img class="" src={Cabello} width="400" />
+                            <img alt="" src={Cabello} width="400" />
                         </div>
                         <div className="col">
                             <p></p>
@@ -23,7 +23,7 @@ export const Descripcionservicio = () => {
                             <p></p>
                             <p></p>
                             <form>
-                                <p class="clasificacion"><h5>Calificación:
+                                <p className="clasificacion"><h5>Calificación:
                                     <label for="radio1">★</label>
                                     <label for="radio1">★</label>
                                     <label for="radio1">★</label>
@@ -33,7 +33,7 @@ export const Descripcionservicio = () => {
                                 </p>
                             </form>
                             <div className="col-auto">
-                                <button type="button" class="btn btn-light mb-3">Reservar</button>
+                                <button type="button" className="btn btn-light mb-3">Reservar</button>
                             </div>
                         </div>
                     </div>
