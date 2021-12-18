@@ -4,11 +4,11 @@ import React from 'react'
 export const Presentacionhome = () => {
     return (
         <>
-            <section class="my-4">
+            <section className="my-4">
                 <div className="container">
                     <div className="row">
                         <div className="col-md-6">
-                            <img class="" src={Imgpresentacion} width="500" />
+                            <img alt="" className="" src={Imgpresentacion} width="500" />
                         </div>
                         <div className="col">
                             <h2>Bienvenido</h2>

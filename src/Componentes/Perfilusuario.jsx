@@ -4,7 +4,7 @@ export const Perfilusuario = () => {
 
     return (
         <>
-            <div class="d-flex justify-content-center">
+            <div className="d-flex justify-content-center">
               <h1>Perfil de Usuario</h1>        
             </div>  
             <p/>
@@ -12,30 +12,30 @@ export const Perfilusuario = () => {
             <img alt="" src={Avatarusuario} width="150" />
             </div>
             <p/>
-            <div class="d-flex justify-content-left">
+            <div className="d-flex justify-content-left">
                 <h4>Silfredo Godoy Chavez</h4>     
             </div>
-              <div class="d-flex justify-content-left">
+              <div className="d-flex justify-content-left">
                 <h4>silfredogch@gmail.com</h4>
               </div>     
-              <div class="d-flex justify-content-left">
+              <div className="d-flex justify-content-left">
                 <h4>3156828676</h4>
               </div>     
             <p/>
 
 
-            <div class="d-flex justify-content-center">
-                <button type="button" class="btn btn-light">Reservar+</button>
+            <div className="d-flex justify-content-center">
+                <button type="button" className="btn btn-light">Reservar+</button>
             </div>
 
 
-            <div class="d-flex justify-content-left">
+            <div className="d-flex justify-content-left">
                 <h2>Mis servicios</h2>
             </div>     
               <p/>
 
-            <div class="d-flex justify-content-center">
-            <table class="table table-dark table-striped">
+            <div className="d-flex justify-content-center">
+            <table className="table table-dark table-striped">
                 <thead>
                     <tr>
                     <th scope="col">#</th>

@@ -52,7 +52,7 @@ export function Crearservicio() {
                     </div>
                     <p></p>
                     <div className="d-grid gap-2 col-6 mx-auto">
-                        <textarea class="form-control rounded-3" name="Descripción" id="descripcion" rows="8" placeholder="Descripción" ref={descrip_servicio}></textarea>
+                        <textarea className="form-control rounded-3" name="Descripción" id="descripcion" rows="8" placeholder="Descripción" ref={descrip_servicio}></textarea>
                     </div>
                     <p></p>
                     <div className="d-grid gap-2 col-6 mx-auto">
