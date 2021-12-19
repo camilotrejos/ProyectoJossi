@@ -3,10 +3,15 @@ import { Descripcionservicio } from './Descripcionservicio'
 import { Otrosservicios } from './Otrosservicios'
 import { Ultimoscomentarios } from './Ultimoscomentarios'
 
-export const Servicios = () => {
+export const ServiciosDetalle = (props) => {
+    
+
+    
     return (
         <>
-            <div className="col-sm-12">
+
+            <h1>{props.name}</h1>
+            {/* <div className="col-sm-12">
                 <Descripcionservicio />
             </div>
             <div className="col-sm-12">
@@ -14,7 +19,7 @@ export const Servicios = () => {
             </div>
             <div className="col-sm-12">
                 <Otrosservicios />
-            </div>
+            </div> */}
         </>
     )
 }

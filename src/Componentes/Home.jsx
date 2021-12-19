@@ -5,6 +5,7 @@ import { Registrohome } from './Registrohome'
 import {Servicioshome} from './Servicioshome'
 
 export const Home = () => {
+
     return (
         
               <>

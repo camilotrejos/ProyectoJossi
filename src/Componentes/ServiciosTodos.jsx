@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import React from 'react'
 
-export const Servicioshome = () => {
+export const ServiciosTodos = () => {
 
     const [dataServicios, setdataServicios] = useState([]);
     
@@ -22,7 +22,7 @@ export const Servicioshome = () => {
     return (
         <>
             <section>
-                <div>
+                <div className="d-flex justify-content-center">
                     <h1>Nuestros servicios</h1>
                 </div>
                 <p></p>
@@ -35,7 +35,11 @@ export const Servicioshome = () => {
                                         <div className="card-body">
                                             <img alt={serv.nombre_servicio} src={`../src/Imagenes/${serv.url_imagen_servicio}`} width="300" />
                                         </div>
-                                        <div className="card-footer"><button type="button" className="btn btn-dark">{serv.nombre_servicio}</button></div>
+                                        <div className="card-footer">
+                                            <button type="button" className="btn btn-dark">
+                                                <a href={`../servicios/${serv.id_servicio}`}>{serv.nombre_servicio}</a>
+                                            </button>
+                                        </div>
                                     </div>  
                                 </div>
                             );
