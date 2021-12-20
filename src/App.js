@@ -36,7 +36,7 @@ function App() {
               <Route path="/crearservicio" element={<Crearservicio />}></Route>
               <Route path='/perfilusuario' element={<Perfilusuario />} />
               <Route path='/dashboard' element={<Dashboard />} />
-              <Route path='/servicio/:id_servicio' element={<ServiciosDetalle name="1"/>} />
+              <Route path='/servicios/:id_servicio' element={<ServiciosDetalle />} />
             </Routes>
             <div className="col-sm-12">
               <Footer />

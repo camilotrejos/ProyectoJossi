@@ -11286,3 +11286,10 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
+
+.servicios {
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: rgba(255,255,255,0.1) !important;
+  transition: all ease .25s;
+}
