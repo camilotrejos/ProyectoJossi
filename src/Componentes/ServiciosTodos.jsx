@@ -37,7 +37,8 @@ export const ServiciosTodos = () => {
                                         <div className="card bg-dark text-light border-0 servicios">
                                             <img alt="" src={servImages(`./${serv.url_imagen_servicio}`).default} className="card-img-top" />
                                             <div className="card-body">
-                                                <h5 className="card-title">{serv.nombre_servicio}</h5>
+                                                <h4 className="card-title">{serv.nombre_servicio}</h4>
+                                                <h6>Costo: ${serv.costo_servicio}</h6>
                                             </div>
                                         </div>
                                     </a>

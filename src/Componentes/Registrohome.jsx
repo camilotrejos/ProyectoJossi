@@ -7,15 +7,22 @@ export const Registrohome = () => {
                 <h2>Registrate y has parte de la familia Jossi</h2>
             </div>
             <p></p>
-            <form>
-                <div className="d-grid gap-2 col-6 mx-auto">
-                    <button type="button" className="btn btn-light btn-block">Registrarse</button>
-                </div>
+                            
+                    <a href='../registro'>
+                        <div className="d-grid gap-2 col-6 mx-auto">
+                            <button type="button" className="btn btn-light">
+                                Registrarse
+                            </button>
+                        </div>
+                    </a>
+                                    
+                
                 <p></p>
-                <div className="d-grid gap-2 col-6 mx-auto">
-                    <button type="button" className="btn btn-secondary btn-block">Iniciar sesión</button>
-                </div>
-            </form>
+                    <a href='../registro'>
+                        <div className="d-grid gap-2 col-6 mx-auto">
+                            <button type="button" className="btn btn-secondary btn-block">Iniciar sesión</button>
+                        </div>
+                    </a>
         </>
     )
 }

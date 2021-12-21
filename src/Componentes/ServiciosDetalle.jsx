@@ -7,9 +7,9 @@ import { Ultimoscomentarios } from './Ultimoscomentarios'
 export const ServiciosDetalle = ()=>{
     
     const [dataServicio, setdataServicio] = useState([]);
+    const [otrosServicios, setotrosServicios] = useState([]);
 
     const params = useParams();
-    
 
     useEffect(()=>{
         fetch(`http://localhost:8080/api/servicios/${params._id}`)
@@ -20,6 +20,17 @@ export const ServiciosDetalle = ()=>{
             })
         
     },[setdataServicio, params._id]);
+
+    useEffect(()=>{
+        fetch('http://localhost:8080/api/servicios/')
+            .then(res => res.json())
+            .then(data=>{
+                console.log(data)
+                setotrosServicios(data);
+            })
+        
+    },[]);
+
 
 
     return (
@@ -32,7 +43,9 @@ export const ServiciosDetalle = ()=>{
                 <Ultimoscomentarios />
             </div>
             <div className="col-sm-12">
-                <Otrosservicios />
+                <Otrosservicios>
+                    {otrosServicios.filter(serv=>serv._id!==params._id)}
+                </Otrosservicios>
             </div>
     
         </>

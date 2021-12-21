@@ -1,7 +1,6 @@
-import Cejas from "../Imagenes/Cejas.jpeg";
-import Barba from "../Imagenes/Barba.jpeg";
+const servImages = require.context('../Imagenes', true);
 
-export const Otrosservicios = () => {
+export const Otrosservicios = ({children}) => {
     return (
         <>
         <section>
@@ -9,24 +8,23 @@ export const Otrosservicios = () => {
                     <h1>Otros servicios</h1>
                 </div>
                 <p></p>
-                <div className="row gx-4 gx-lg-5">
-                    <div className="col-md-4 mb-5">
-                        <div className="card h-100">
-                            <div className="card-body">
-                                <img alt="" src={Barba} width="300" />
-                            </div>
-                            <div className="card-footer"><button type="button" className="btn btn-dark">Barba</button></div>
-                        </div>
+                <div className="row gx-4 gx-lg-5">     
+                        {children.map((serv)=>{   
+                            return(
+                                <div key={serv._id} className="col-md-4 mb-5">
+                                    <a href={`../servicios/${serv._id}`} className="text-decoration-none">
+                                        <div className="card bg-dark text-light border-0 servicios">
+                                            <img alt="" src={servImages(`./${serv.url_imagen_servicio}`).default} className="card-img-top" />
+                                            <div className="card-body">
+                                                <h4 className="card-title">{serv.nombre_servicio}</h4>
+                                                <h6>Costo: ${serv.costo_servicio}</h6>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            );
+                        })}          
                     </div>
-                    <div className="col-md-4 mb-5">
-                        <div className="card h-100">
-                            <div className="card-body">
-                                <img alt="" src={Cejas} width="300" />
-                            </div>
-                            <div className="card-footer"><button type="button" className="btn btn-dark">Cejas</button></div>
-                        </div>
-                    </div>
-                </div>
             </section>   
         </>
     )

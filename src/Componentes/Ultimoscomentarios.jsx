@@ -5,12 +5,11 @@ export const Ultimoscomentarios = () => {
                 <h5>Ultimos comentarios:</h5>
                 <p></p>
                 <div className="row g-0">
-                    <div className="form-control">Ana dijo</div>
+                    <p className="fw-bold">Usuario: Ana</p>
+                    <div className="form-control">Comentario aqui</div>
                     <p></p>
-                    <div className="form-control">Pedro dijo</div>
-                    <p></p>
-                    <div className="form-control">Steven dijo</div>
-                    <p></p>
+                    <hr></hr>
+                   
                 </div>
             </section>
         </>

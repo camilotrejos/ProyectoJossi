@@ -20,12 +20,15 @@ export const Descripcionservicio = (props) => {
                                     <div align="justify">
                                         <p>{serv.descripcion_servicio}</p>
                                     </div>
+                                    <div align="justify">
+                                        <p><h6>Costo: ${serv.costo_servicio}</h6></p>
+                                    </div>
                                     <p></p>
                                     <p></p>
                                     
                                     <div className="col-auto">
                                         <a href="../agenda">
-                                        <button type="button" className="btn btn-light mb-3">Reservar</button>
+                                        <button type="button" className="btn btn-light mb-3">¡Reserva ahora mismo!</button>
                                         </a>
                                     </div>
                                 </div>

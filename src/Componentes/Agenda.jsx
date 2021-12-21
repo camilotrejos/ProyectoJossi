@@ -1,5 +1,5 @@
 import React from 'react'
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import { Titulo } from './Titulo'
 
 
@@ -9,6 +9,8 @@ export const Agenda = () => {
 /*     const [SelectedServ, setSelectedServ] = useState(""); */
     const [ListBarberos, setListBarberos] = useState([]);
     const [dataServicios, setdataServicios] = useState([]);
+    const selectServRef = useRef();
+
 
     useEffect(()=>{
         fetch('http://localhost:8080/api/servicios/')
@@ -21,12 +23,12 @@ export const Agenda = () => {
     },[]);
 
     const selectServ = () =>{
+        const selectedServ = selectServRef.current.value
         fetch('http://localhost:8080/api/barberos/')
             .then(res => res.json())
             .then(data=>{
-                console.log(data)
-                
-                setListBarberos(data);
+                console.log(data)                
+                setListBarberos(data.filter(barb=>barb.id_servicio_barbero.nombre_servicio===selectedServ));
             });
     };
 
@@ -40,7 +42,7 @@ export const Agenda = () => {
 
             <div className="d-flex justify-content-center">
 
-                <select className="form-select form-select-lg mb-3" aria-label=".form-select-lg example" defaultValue={'DEFAULT'} onChange={selectServ} >
+                <select className="form-select form-select-lg mb-3" aria-label=".form-select-lg example" defaultValue={'DEFAULT'} onChange={selectServ} ref={selectServRef}>
                     <option value="DEFAULT" disabled>Seleccione un servicio</option>
                     {dataServicios.map((serv)=>{
                         return(
@@ -55,7 +57,7 @@ export const Agenda = () => {
 
             <div className="d-flex justify-content-center">
 
-                <select className="form-select form-select-lg mb-3" aria-label=".form-select-lg example" defaultValue={'DEFAULT'} onChange={selectServ} >
+                <select className="form-select form-select-lg mb-3" aria-label=".form-select-lg example" defaultValue={'DEFAULT'} >
                     <option value="DEFAULT" disabled>Seleccione un Barbero</option>
                     {ListBarberos.map((barb)=>{
                         return(
