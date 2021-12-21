@@ -33,7 +33,7 @@ export const ServiciosTodos = () => {
                         {dataServicios.map((serv)=>{   
                             return(
                                 <div key={serv._id} className="col-md-4 mb-5">
-                                    <a href={`../servicios/${serv.id_servicio}`} className="text-decoration-none">
+                                    <a href={`../servicios/${serv._id}`} className="text-decoration-none">
                                         <div className="card bg-dark text-light border-0 servicios">
                                             <img alt="" src={servImages(`./${serv.url_imagen_servicio}`).default} className="card-img-top" />
                                             <div className="card-body">

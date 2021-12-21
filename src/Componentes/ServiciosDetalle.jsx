@@ -12,14 +12,14 @@ export const ServiciosDetalle = ()=>{
     
 
     useEffect(()=>{
-        fetch(`http://localhost:8080/api/servicios/${params.id_servicio}`)
+        fetch(`http://localhost:8080/api/servicios/${params._id}`)
             .then(res => res.json())
             .then(data=>{
                 console.log(data)
                 setdataServicio(data);
             })
         
-    },[setdataServicio, params.id_servicio]);
+    },[setdataServicio, params._id]);
 
 
     return (
