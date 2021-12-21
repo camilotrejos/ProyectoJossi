@@ -27,11 +27,14 @@ export const Header = () => {
                                 <li className="nav-item">
                                     <Link to="/registro" className="nav-link">Registro</Link>
                                 </li>
+                                <li className="nav-item">
+                                    <Link to="/dashboard" className="nav-link">Dashboard</Link>
+                                </li>
+                                <li className="nav-item">
+                                    <Link to="/perfilusuario" className="nav-link">Perfil</Link>
+                                </li>
                             </ul>
-                            <form className="d-flex m-0">
-                                <input className="form-control me-2" type="search" placeholder="Buscar" aria-label="Search" />
-                                <button type="button" className="btn btn-dark">Buscar</button>                
-                            </form>
+                            
                         </div>
                     </div>
                 </nav>

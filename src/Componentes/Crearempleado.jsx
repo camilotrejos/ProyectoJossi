@@ -1,9 +1,10 @@
 import { useRef, useState, useEffect } from "react";
+
+
 export function Crearempleado() {
 
     const [dataServicios, setdataServicios] = useState([]);
     
-    let array = [];
     const [alerta, setAlerta] = useState(false);
 
     const nombreRef = useRef();
@@ -54,9 +55,9 @@ export function Crearempleado() {
     return (
         <>
             {alerta && <div className="alert alert-primary" role="alert">
-                "Empleado {nombreRef.current.value} creado con éxito"
+                "Barbero {nombreRef.current.value} creado con éxito"
             </div>}
-            <h1><center>Crear empleado</center></h1>
+            <h1><center>Crear Barbero</center></h1>
             <p></p>
             <form>
                 <center>

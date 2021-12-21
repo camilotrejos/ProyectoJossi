@@ -1,14 +1,29 @@
-import React from 'react'
+import React, { useEffect, useState }from 'react'
 
 export const Dashboard = () => {
 
-    //const dataService= [
+    const [dataServicios, setdataServicios] = useState([]);
+    const [dataBarberos, setdataBarberos] = useState([]);
 
-    //{Id:1, Nombre:'Corte de Cabello', Fecha:'24/12/2021', Empleado:'Ramón Pérez', Comentario: "Muy bueno", Calificacion: "5", Accion: "E"},
-    //{Id:2, Nombre:'Corte de Barba', Fecha:'07/12/2021', Empleado:'Agripinito Tirciniano', Comentario: "Muy bueno", Calificacion: "4", Accion: "E"}
+    useEffect(()=>{
+        fetch('http://localhost:8080/api/servicios/')
+            .then(res => res.json())
+            .then(data=>{
+                console.log(data)
+                setdataServicios(data);
+            })
+        
+        fetch('http://localhost:8080/api/barberos/')
+        .then(res => res.json())
+        .then(data=>{
+            console.log(data)
+            setdataBarberos(data);
+        })
 
-    //]
-    
+    },[]);
+
+
+
     return (
         <>
             <div className="d-flex justify-content-center">
@@ -16,8 +31,9 @@ export const Dashboard = () => {
             </div>  
             <p/> <p/><p/><p/>
             <div className="d-flex justify-content-center">
-
-                <button type="button" className="btn btn-light">Servicio+</button>
+                <a href='../crearservicio'>
+                    <button type="button" className="btn btn-light">Servicio+</button>
+                </a>
             </div>
 
 
@@ -29,83 +45,69 @@ export const Dashboard = () => {
             <table className="table table-dark table-striped">
                 <thead>
                     <tr>
-                    <th scope="col">#</th>
-                    <th scope="col">Descripción</th>
+                    <th scope="col">Nombre</th>
+                    <th scope="col">Descripcion</th>
                     <th scope="col">Costo</th>
-                    <th scope="col">Duración</th>
                     <th scope="col">Acciones</th>
                     
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                    <th scope="row">1</th>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                                        
-                    </tr>
-                    <tr>
-                    <th scope="row">2</th>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    </tr>
-                    <tr>
-                    <th scope="row">3</th>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
+                
+                {dataServicios.map((serv)=>{
+                    return(
+                        <tr key={serv._id}>
+                        <td>{serv.nombre_servicio}</td>
+                        <td>{serv.descripcion_servicio}</td>
+                        <td>{serv.costo_servicio}</td>
+                        <td> Editar / Eliminar </td>
+                                            
+                        </tr>
+                    );
+                })}
                     
-                    </tr>
+                    
                 </tbody>
                 </table>
 
             </div>
             <p/><p/><p/>
             <div className="d-flex justify-content-center">
-
-                <button type="button" className="btn btn-light">Empleado+</button>
+                <a href='../crearempleado'>
+                    <button type="button" className="btn btn-light">Barberos+</button>
+                </a>
             </div>
             <div className="d-flex justify-content-left">
-                <h2>Empleados</h2>
+                <h2>Barberos</h2>
             </div>     
               
             <div className="d-flex justify-content-center">
             <table className="table table-dark table-striped">
                 <thead>
                     <tr>
-                    <th scope="col">#</th>
                     <th scope="col">Nombre</th>
+                    <th scope="col">Apellido</th>
+                    <th scope="col">Estado</th>
                     <th scope="col">Servicio</th>
-                    <th scope="col">Acciones</th>
                     
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                    <th scope="row">1</th>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                                                            
-                    </tr>
-                    <tr>
-                    <th scope="row">2</th>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    </tr>
-                    <tr>
-                    <th scope="row">3</th>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                                       
-                    </tr>
+                
+                {dataBarberos.map((barb)=>{
+                    return(
+
+                        <tr key={barb._id}>
+                        <td>{barb.nombres_barbero}</td>
+                        <td>{barb.apellidos_barbero}</td>
+                        <td>{barb.estado_barbero.toString()}</td>
+                        <td>{barb.id_servicio_barbero.nombre_servicio}</td>
+                        <td> Editar / Eliminar </td>               
+                        </tr>
+                    );
+                })}
+                    
+                    
                 </tbody>
                 </table>
 

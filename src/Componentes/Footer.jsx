@@ -25,8 +25,8 @@ export const Footer = () => {
                             <ul className="list-unstyled">
                                 <li className="mb-2">Calle 45 # 56 - 54</li>
                                 <li className="mb-2">Tel: (060) 456 67 45</li>
-                                <li><a href="##" className="link-primary">Términos y condiciones</a></li>
-                                <li><a href="##" className="link-primary">Politicas de privacidad</a></li>
+                                <li><a href="##" className="link-light">Términos y condiciones</a></li>
+                                <li><a href="##" className="link-light">Politicas de privacidad</a></li>
                             </ul>
                         </div>
                     </div>
